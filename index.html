@@ -6,35 +6,148 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Project tracking intro component</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
 
   <style>
+
+    /* footer styles */
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* my styles */
+
+    * {
+      padding: 0px;
+      margin: 0px;
+      outline: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      height: 100vh;
+      background: hsl(207, 33%, 95%);
+      font-weight: 400;
+    }
+
+    main {
+      height: 100vh;
+    }
+
+    main .center {
+      display: flex;
+      flex-direction: row;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    main .center .left {
+      height: 100vh;
+      width: 50%;
+      font-size: 20px;
+      padding: 0 20px;
+    }
+
+    main .center .left span, main .center .left p:nth-child(1) {
+      color: hsl(231, 7%, 65%);
+    }
+
+    main .center .left p strong {
+      background: hsl(230, 29%, 20%);
+      color: hsl(207, 33%, 95%);
+      padding: 3px 13px;
+      border-radius: 20px;
+    }
+
+    main .center .left h1 {
+      margin-top: 30px;
+      font-size: 90px;
+      font-family: 'Barlow Condensed';
+      color: hsl(230, 29%, 20%);
+      font-weight: 800;
+    }
+
+    main .center .left p:nth-last-of-type(1) {
+      margin-top: 50px;
+      width: 45%;
+      color: hsl(230, 29%, 20%);
+    }
+
+    main .center .left .text .footer-text {
+      margin-top: 70px;
+    }
+
+    main .center .left .text .footer-text button {
+      background: hsl(0, 100%, 68%);
+      color: hsl(207, 33%, 95%);
+      padding: 20px 40px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main .center .left img[alt="logo"] {
+      margin-bottom: 200px;
+    }
+
+    main .center .right {
+      height: 100vh;
+      width: 50%;
+      background-image: url(./images/illustration-devices.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    main .center .right nav ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 150px;
+      font-weight: bold;
+    }
+
+    main .center .right nav ul li:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    main .center .right nav ul li:not(:nth-child(4)) {
+      list-style: none;
+    }
+
+    main .center .right nav ul li:nth-child(4) {
+      padding-left: 40px;
+      color: hsl(231, 7%, 65%);
+    }
   </style>
 </head>
 <body>
   <main>
-    <div class="left">
-      <img src="./images/logo.svg" alt="logo">
-      <div class="text">
-        <p><strong>NEW</strong> MONOGRAPH DASHBOARD</p>
-        <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
-        <p>Project planning and time tracking for agile teams</p>
-        <div class="footer-text">
-          <button>SCHEDULE A DEMO</button>
-          <span>TO SEE A PREVIEW</span>
+    <div class="center">
+      <div class="left">
+        <img src="./images/logo.svg" alt="logo">
+        <div class="text">
+          <p><strong>NEW</strong> MONOGRAPH DASHBOARD</p>
+          <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+          <p>Project planning and time tracking for agile teams</p>
+          <div class="footer-text">
+            <button>SCHEDULE A DEMO</button>
+            <span>TO SEE A PREVIEW</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="right">
-      <nav>
-        <ul>
-          <li>PRODUCT</li>
-          <li>FEATURE</li>
-          <li>PRICING</li>
-          <li>LOGIN</li>
-        </ol>
-      </nav>
+      <div class="right">
+        <nav>
+          <ul>
+            <li>PRODUCT</li>
+            <li>FEATURE</li>
+            <li>PRICING</li>
+            <li>LOGIN</li>
+          </ol>
+        </nav>
+      </div>
     </div>
   </main>
   <footer>
