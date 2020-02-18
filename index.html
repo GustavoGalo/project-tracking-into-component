@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,6 +17,8 @@
         body {
             height: 100vh;
             overflow-x: hidden;
+            font-size: 18px;
+            font-family: 'Barlow', sans-serif;
         }
 
         main {
@@ -41,6 +45,8 @@
         main .right nav {
             display: flex;
             justify-content: space-between;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: bold;
         }
 
         main .right nav span {
@@ -52,22 +58,29 @@
             padding-right: 20px;
         }
 
+        main .right nav ul li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
         main .right nav ul li:not(:first-child) {
             margin-left: 60px;
         }
 
         main .right nav ul li:not(:last-child) {
             list-style: none;
+            color: hsl(230, 29%, 20%);
         }
 
         main .right nav ul li:last-child {
-            padding-left: 40px;
+            padding-left: 30px;
+            color: hsl(231, 7%, 65%);
         }
 
         main .right .top {
             height: 550px;
             width: 50vw;
-            background-color: violet;
+            background-color: hsl(207, 33%, 95%);
             position: absolute;
             top: 0%;
             z-index: -1;
@@ -78,6 +91,58 @@
             padding-top: 150px;
             width: 1320px;
         }
+
+        main .left .text p:first-child span {
+            margin-left: 20px;
+            color: hsl(231, 7%, 65%);
+        }
+
+        main .left .text p:first-child strong{
+            color: hsl(207, 33%, 95%);
+            background: hsl(230, 29%, 20%);
+            padding: 5px 12px;
+            border-radius: 35px;
+        }
+
+        main .left .text h1 {
+            width: 90%;
+            margin-top: 30px;
+            font-size: 90px;
+            font-family: 'Barlow Condensed', sans-serif;
+            color: hsl(230, 29%, 20%);
+        }
+
+        main .left .text p:last-child {
+            margin-top: 40px;
+            width: 38%;
+            color: hsl(231, 7%, 65%);
+        }
+
+        main .left .actions {
+            margin-top: 50px;
+        }
+
+        main .left .actions button {
+            padding: 20px 40px;
+            border-radius: 10px;
+            background: hsl(0, 100%, 68%);
+            color: hsl(207, 33%, 95%);
+            border: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        main .left .actions button:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: 0.1s;
+        }
+
+        main .left .actions span {
+            color: hsl(231, 7%, 65%);
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -85,9 +150,13 @@
         <div class="left">
             <img src="./images/logo.svg" alt="logo">
             <div class="text">
-                <p><strong>NEW</strong> MONOGRAPH DASHBOARD</p>
+                <p><strong>NEW</strong> <span>MONOGRAPH DASHBOARD</span></p>
                 <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
                 <p>Project planning and time tracking for agile teams</p>
+            </div>
+            <div class="actions">
+                <button>SCHEDULE A DEMO</button>
+                <span>TO SEE A PREVIEW</span>
             </div>
         </div>
         <div class="right">
