@@ -19,7 +19,8 @@
             height: 100%;
             font-size: 18px;
             font-family: 'Barlow', sans-serif;
-            min-height: 600px;
+            min-height: 750px;
+            overflow-x: hidden;
         }
         
         header {
@@ -33,23 +34,41 @@
         }
 
         .style-background {
-            background: yellow;
+             background:  hsl(207, 33%, 95%);
             width: 50vw;
             position: absolute;
             top: 0%;
-            left: 50%;
+            left: 50vw;
             height: 50vh;
             z-index: -1;
             border-bottom-left-radius: 100px;
         }
 
+        header img:last-of-type {
+            display: none;
+        }
+
         header nav ul {
             display: flex;
-            list-style: none;
         }
 
         header nav ul li {
-            padding: 0 20px;
+            padding: 0 30px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+        }
+
+        header nav ul li:not(:last-of-type) {
+            list-style: none;
+        }
+
+        header nav ul li:last-of-type {
+            margin-left: 40px;
+            color: hsl(231, 7%, 65%);
+        }
+
+        header nav ul li:hover {
+            text-decoration: underline;
         }
 
         main {
@@ -64,7 +83,52 @@
             width: 50%;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        main .left .text span:first-of-type {
+            padding: 3px 10px;
+            border-radius: 15px;
+            color: white;
+            background: hsl(230, 29%, 20%);
+        }
+
+        main .left .text p, main .left .text span:last-of-type, main .left .actions span {
+            color:hsl(230, 11%, 40%);
+        }
+
+        main .left .text h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color:  hsl(230, 29%, 20%);
+            text-shadow: 0px 0px hsl(230, 29%, 20%);
+            font-family: 'Barlow Condensed', sans-serif;
+            padding-top: 20px;
+        }
+
+        main .left .text p {
+            margin-top: 30px;
+            width: 40%;
+        }
+
+        main .left .actions {
+            padding-top: 40px;
+        }
+
+        main .left .actions button {
+            padding: 20px 30px;
+            border-radius: 10px;
+            background: hsl(0, 100%, 68%);
+            color: white;
+            border: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        main .left .actions button:hover {
+            opacity: 0.9;
         }
 
         main .right {
@@ -76,10 +140,22 @@
 
         main .right img {
             position: absolute;
-            left: 60%;
+            left: 50%;
+            width: 1300px;
+            height: auto;
         }
 
         @media screen and (max-width: 900px) {
+            header nav {
+                display: none;
+            }
+
+            header img:last-of-type {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+            }
+
             main {
                 flex-direction: column-reverse;
                 justify-content: flex-end;
@@ -94,12 +170,17 @@
                 position: static;
                 width: 100%;
             }
+
+            .style-background {
+                height: 60vh;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <img src="./images/logo.svg" alt="logo">
+        <img src="images/icon-hamburger.svg" alt="icon-hamburger">
         <nav>
             <ul>
                 <li>PRODUCT</li>
@@ -112,7 +193,8 @@
     <main>
         <section class="left">
             <div class="text">
-                <p><strong>NEW</strong> <span>MONOGRAPH DASHBOARD</span></p>
+                <span><strong>NEW</strong></span>
+                <span>MONOGRAPH DASHBOARD</span>
                 <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
                 <p>Project planning and time tracking for agile teams</p>
             </div>
