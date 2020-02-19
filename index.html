@@ -83,6 +83,7 @@
             background-color: hsl(207, 33%, 95%);
             position: absolute;
             top: 0%;
+            left: 50vw;
             z-index: -1;
             border-bottom-left-radius: 100px;
         }
@@ -142,6 +143,12 @@
         main .left .actions span {
             color: hsl(231, 7%, 65%);
             margin-left: 20px;
+        }
+
+        @media screen and (max-width: 1080px) {
+            main {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 </head>

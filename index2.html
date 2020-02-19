@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            font-size: 18px;
+            font-family: 'Barlow', sans-serif;
+            min-height: 600px;
+        }
+        
+        header {
+            max-width: 1440px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            margin: 0 auto;
+        }
+
+        .style-background {
+            background: yellow;
+            width: 50vw;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            height: 50vh;
+            z-index: -1;
+            border-bottom-left-radius: 100px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            padding: 0 20px;
+        }
+
+        main {
+            height: calc(100vh - 72px);
+            max-width: 1440px;
+            padding: 0 40px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        main .left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .right img {
+            position: absolute;
+            left: 60%;
+        }
+
+        @media screen and (max-width: 900px) {
+            main {
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+            }
+
+            main .left, main .right {
+                width: 100%;
+                padding-top: 100px;
+            }
+
+            main .right img {
+                position: static;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="logo">
+        <nav>
+            <ul>
+                <li>PRODUCT</li>
+                <li>FEATURE</li>
+                <li>PRICING</li>
+                <li>LOGIN</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <div class="text">
+                <p><strong>NEW</strong> <span>MONOGRAPH DASHBOARD</span></p>
+                <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+                <p>Project planning and time tracking for agile teams</p>
+            </div>
+            <div class="actions">
+                <button>SCHEDULE A DEMO</button>
+                <span>TO SEE A PREVIEW</span>
+            </div>
+        </section>
+        <section class="right">
+            <img src="./images/illustration-devices.svg" alt="illustration-devices">
+        </section>
+    </main>
+    <div class="style-background"></div>
+</body>
+</html>
