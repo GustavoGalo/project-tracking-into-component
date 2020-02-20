@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -15,149 +16,187 @@
         }
 
         body {
-            height: 100vh;
-            overflow-x: hidden;
+            height: 100%;
             font-size: 18px;
             font-family: 'Barlow', sans-serif;
+            min-height: 750px;
+            overflow-x: hidden;
         }
-
-        main {
+        
+        header {
             max-width: 1440px;
-            margin: 0 auto;
-            display: flex;
-            padding-top: 50px;
-        }
-
-        main .left {
-            height: 100vh;
-            width: 50%;
-        }
-
-        main .left .text{
-            padding-top: 200px;
-        }
-
-        main .right {
-            height: 100vh;
-            width: 50%;
-        }
-
-        main .right nav {
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: bold;
+            align-items: center;
+            padding-top: 40px;
+            margin: 0 auto;
         }
 
-        main .right nav span {
-            padding-left: 10px;
-        }
-
-        main .right nav ul{
-            display: flex;
-            padding-right: 20px;
-        }
-
-        main .right nav ul li:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        main .right nav ul li:not(:first-child) {
-            margin-left: 60px;
-        }
-
-        main .right nav ul li:not(:last-child) {
-            list-style: none;
-            color: hsl(230, 29%, 20%);
-        }
-
-        main .right nav ul li:last-child {
-            padding-left: 30px;
-            color: hsl(231, 7%, 65%);
-        }
-
-        main .right .top {
-            height: 550px;
+        .style-background {
+             background:  hsl(207, 33%, 95%);
             width: 50vw;
-            background-color: hsl(207, 33%, 95%);
             position: absolute;
             top: 0%;
             left: 50vw;
+            height: 50vh;
             z-index: -1;
             border-bottom-left-radius: 100px;
         }
 
-        main .right img {
-            padding-top: 150px;
-            width: 1320px;
+        header img:last-of-type {
+            display: none;
         }
 
-        main .left .text p:first-child span {
-            margin-left: 20px;
+        header nav ul {
+            display: flex;
+        }
+
+        header nav ul li {
+            padding: 0 30px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+        }
+
+        header nav ul li:not(:last-of-type) {
+            list-style: none;
+        }
+
+        header nav ul li:last-of-type {
+            margin-left: 40px;
             color: hsl(231, 7%, 65%);
         }
 
-        main .left .text p:first-child strong{
-            color: hsl(207, 33%, 95%);
+        header nav ul li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        main {
+            height: calc(100vh - 72px);
+            max-width: 1440px;
+            padding: 0 40px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        main .left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        main .left .text span:first-of-type {
+            padding: 3px 10px;
+            border-radius: 15px;
+            color: white;
             background: hsl(230, 29%, 20%);
-            padding: 5px 12px;
-            border-radius: 35px;
+        }
+
+        main .left .text p, main .left .text span:last-of-type, main .left .actions span {
+            color:hsl(230, 11%, 40%);
         }
 
         main .left .text h1 {
-            width: 90%;
-            margin-top: 30px;
-            font-size: 90px;
+            font-size: 60px;
+            font-weight: 700;
+            color:  hsl(230, 29%, 20%);
+            text-shadow: 0px 0px hsl(230, 29%, 20%);
             font-family: 'Barlow Condensed', sans-serif;
-            color: hsl(230, 29%, 20%);
+            padding-top: 20px;
         }
 
-        main .left .text p:last-child {
-            margin-top: 40px;
-            width: 38%;
-            color: hsl(231, 7%, 65%);
+        main .left .text p {
+            margin-top: 30px;
+            width: 40%;
         }
 
         main .left .actions {
-            margin-top: 50px;
+            padding-top: 40px;
         }
 
         main .left .actions button {
-            padding: 20px 40px;
+            padding: 20px 30px;
             border-radius: 10px;
             background: hsl(0, 100%, 68%);
-            color: hsl(207, 33%, 95%);
+            color: white;
             border: none;
             font-family: 'Barlow Condensed', sans-serif;
-            font-weight: bold;
             font-size: 20px;
+            font-weight: 700;
         }
 
         main .left .actions button:hover {
-            cursor: pointer;
-            opacity: 0.7;
-            transition: 0.1s;
+            opacity: 0.9;
         }
 
-        main .left .actions span {
-            color: hsl(231, 7%, 65%);
-            margin-left: 20px;
+        main .right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        @media screen and (max-width: 1080px) {
+        main .right img {
+            position: absolute;
+            left: 50%;
+            /* width: 100%; */
+            height: auto;
+        }
+
+        @media screen and (max-width: 900px) {
+            header nav {
+                display: none;
+            }
+
+            header img:last-of-type {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+            }
+
             main {
                 flex-direction: column-reverse;
+                justify-content: flex-end;
+            }
+
+            main .left, main .right {
+                width: 100%;
+                padding-top: 100px;
+            }
+
+            main .right img {
+                position: relative;
+                width: 720px;
+                left: 20%;
+            }
+
+            .style-background {
+                height: 60vh;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <img src="./images/logo.svg" alt="logo">
+        <img src="images/icon-hamburger.svg" alt="icon-hamburger">
+        <nav>
+            <ul>
+                <li>PRODUCT</li>
+                <li>FEATURE</li>
+                <li>PRICING</li>
+                <li>LOGIN</li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="left">
-            <img src="./images/logo.svg" alt="logo">
+        <section class="left">
             <div class="text">
-                <p><strong>NEW</strong> <span>MONOGRAPH DASHBOARD</span></p>
+                <span><strong>NEW</strong></span>
+                <span>MONOGRAPH DASHBOARD</span>
                 <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
                 <p>Project planning and time tracking for agile teams</p>
             </div>
@@ -165,20 +204,11 @@
                 <button>SCHEDULE A DEMO</button>
                 <span>TO SEE A PREVIEW</span>
             </div>
-        </div>
-        <div class="right">
-            <div class="top"></div>
-            <nav>
-                <span></span>
-                <ul>
-                    <li>PRODUCT</li>
-                    <li>FEATURES</li>
-                    <li>PRICING</li>
-                    <li>LOGIN</li>
-                </ul>
-            </nav>
+        </section>
+        <section class="right">
             <img src="./images/illustration-devices.svg" alt="illustration-devices">
-        </div>
+        </section>
     </main>
+    <div class="style-background"></div>
 </body>
 </html>
