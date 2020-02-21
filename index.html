@@ -1,214 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            outline: 0;
-            box-sizing: border-box;
-        }
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
 
-        body {
-            height: 100%;
-            font-size: 18px;
-            font-family: 'Barlow', sans-serif;
-            min-height: 750px;
-            overflow-x: hidden;
-        }
-        
-        header {
-            max-width: 1440px;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            margin: 0 auto;
-        }
-
-        .style-background {
-             background:  hsl(207, 33%, 95%);
-            width: 50vw;
-            position: absolute;
-            top: 0%;
-            left: 50vw;
-            height: 50vh;
-            z-index: -1;
-            border-bottom-left-radius: 100px;
-        }
-
-        header img:last-of-type {
-            display: none;
-        }
-
-        header nav ul {
-            display: flex;
-        }
-
-        header nav ul li {
-            padding: 0 30px;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-        }
-
-        header nav ul li:not(:last-of-type) {
-            list-style: none;
-        }
-
-        header nav ul li:last-of-type {
-            margin-left: 40px;
-            color: hsl(231, 7%, 65%);
-        }
-
-        header nav ul li:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        main {
-            height: calc(100vh - 72px);
-            max-width: 1440px;
-            padding: 0 40px;
-            display: flex;
-            margin: 0 auto;
-        }
-
-        main .left {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
-        main .left .text span:first-of-type {
-            padding: 3px 10px;
-            border-radius: 15px;
-            color: white;
-            background: hsl(230, 29%, 20%);
-        }
-
-        main .left .text p, main .left .text span:last-of-type, main .left .actions span {
-            color:hsl(230, 11%, 40%);
-        }
-
-        main .left .text h1 {
-            font-size: 60px;
-            font-weight: 700;
-            color:  hsl(230, 29%, 20%);
-            text-shadow: 0px 0px hsl(230, 29%, 20%);
-            font-family: 'Barlow Condensed', sans-serif;
-            padding-top: 20px;
-        }
-
-        main .left .text p {
-            margin-top: 30px;
-            width: 40%;
-        }
-
-        main .left .actions {
-            padding-top: 40px;
-        }
-
-        main .left .actions button {
-            padding: 20px 30px;
-            border-radius: 10px;
-            background: hsl(0, 100%, 68%);
-            color: white;
-            border: none;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        main .left .actions button:hover {
-            opacity: 0.9;
-        }
-
-        main .right {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        main .right img {
-            position: absolute;
-            left: 50%;
-            /* width: 100%; */
-            height: auto;
-        }
-
-        @media screen and (max-width: 900px) {
-            header nav {
-                display: none;
-            }
-
-            header img:last-of-type {
-                display: block;
-                cursor: pointer;
-                padding: 10px;
-            }
-
-            main {
-                flex-direction: column-reverse;
-                justify-content: flex-end;
-            }
-
-            main .left, main .right {
-                width: 100%;
-                padding-top: 100px;
-            }
-
-            main .right img {
-                position: relative;
-                width: 720px;
-                left: 20%;
-            }
-
-            .style-background {
-                height: 60vh;
-            }
-        }
-    </style>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="./images/logo.svg" alt="logo">
-        <img src="images/icon-hamburger.svg" alt="icon-hamburger">
-        <nav>
-            <ul>
-                <li>PRODUCT</li>
-                <li>FEATURE</li>
-                <li>PRICING</li>
-                <li>LOGIN</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="left">
-            <div class="text">
-                <span><strong>NEW</strong></span>
-                <span>MONOGRAPH DASHBOARD</span>
-                <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
-                <p>Project planning and time tracking for agile teams</p>
-            </div>
-            <div class="actions">
-                <button>SCHEDULE A DEMO</button>
-                <span>TO SEE A PREVIEW</span>
-            </div>
-        </section>
-        <section class="right">
-            <img src="./images/illustration-devices.svg" alt="illustration-devices">
-        </section>
-    </main>
-    <div class="style-background"></div>
+  Product
+  Features
+  Pricing
+  Login
+
+  New
+  Monograph Dashboard
+
+  Powerful insights into your team
+  Project planning and time tracking for agile teams
+
+  Schedule a demo
+  to see a live preview
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
 </body>
 </html>
