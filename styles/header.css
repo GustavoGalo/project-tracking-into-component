@@ -1,0 +1,54 @@
+header {
+    width: 100%;
+}
+
+header .center {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    font-family: 'Barlow Condensed';
+    font-weight: 700;
+}
+
+nav ul li:not(:last-of-type) {
+    list-style: none;
+    padding: 0 20px;
+    color: hsl(230, 29%, 20%);
+}
+
+nav ul li:last-of-type {
+    padding-left: 20px;
+    margin-left: 30px;
+    color: hsl(231, 7%, 65%);
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header .center img[alt="icon-hamburger"] {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    header .center img[alt="icon-hamburger"] {
+        display: block;
+        cursor: pointer;
+    }
+
+    header .center nav {
+        display: none;
+    }
+}
