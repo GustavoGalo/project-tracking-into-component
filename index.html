@@ -61,7 +61,18 @@
           <li>LOGIN</li>
         </ul>
       </nav>
-      <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
+      <img onclick="ToggleVisibility()" src="./images/icon-hamburger.svg" alt="icon-hamburger" >
+      <img onclick="ToggleVisibility()" src="./images/icon-close.svg" alt="icon-close" style="display: none;">
+    </div>
+    <div style="display: none;" class="dropdown-container">
+      <nav>
+        <ul class="dropdown-menu">
+          <li>PRODUCTS</li>
+          <li>FEATURE</li>
+          <li>PRICING</li>
+          <li>LOGIN</li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main>
@@ -92,5 +103,25 @@
     </p>
   </footer>
   <div class="background-top"></div>
+  <script>
+    function ToggleVisibility() {
+      let dropdownElement = document.querySelector('.dropdown-container');
+      let iconHamburgerElement =document.querySelector('img[alt="icon-hamburger"]');
+      let iconCloseElement = document.querySelector('img[alt="icon-close"]');
+
+      let displayValue = dropdownElement.style.display;
+
+      if (displayValue === 'none') {
+        dropdownElement.style.display = 'block';
+        iconHamburgerElement.style.display = 'none';
+        iconCloseElement.style.display = 'block';
+      }
+      else {
+        dropdownElement.style.display = 'none';
+        iconHamburgerElement.style.display = 'block';
+        iconCloseElement.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

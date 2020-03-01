@@ -12,34 +12,68 @@ header .center {
     margin: 0 auto;
 }
 
-nav ul {
+header .center > nav ul {
     display: flex;
 }
 
-nav ul li {
+header .center > nav ul li {
     font-family: 'Barlow Condensed';
     font-weight: 700;
 }
 
-nav ul li:not(:last-of-type) {
+header .center > nav ul li:not(:last-of-type) {
     list-style: none;
     padding: 0 20px;
     color: hsl(230, 29%, 20%);
 }
 
-nav ul li:last-of-type {
+header .center > nav ul li:last-of-type {
     padding-left: 20px;
     margin-left: 30px;
     color: hsl(231, 7%, 65%);
 }
 
-nav ul li:hover {
+header .center > nav ul li:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-header .center img[alt="icon-hamburger"] {
+header .center img[alt="icon-hamburger"], header .center img[alt="icon-close"] {
     display: none;
+}
+
+header .dropdown-container {
+    padding: 0 40px;
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+header .dropdown-container .dropdown-menu {
+    text-align: center;
+    list-style: none;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    padding: 0 20px;
+}
+
+header .dropdown-container .dropdown-menu li {
+    font-family: 'Barlow Condensed';
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+header .dropdown-container .dropdown-menu li:hover {
+    text-decoration: underline;
+}
+
+header .dropdown-container .dropdown-menu li:last-of-type {
+    padding-bottom: 20px;
+    margin-top: 20px;
+    color: hsl(231, 7%, 65%);
+    border-top: 1px solid hsl(231, 7%, 65%);
 }
 
 @media screen and (max-width: 900px) {
@@ -48,7 +82,17 @@ header .center img[alt="icon-hamburger"] {
         cursor: pointer;
     }
 
-    header .center nav {
+    header .center > nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    header .center img[alt="icon-hamburger"], header .center img[alt="icon-close"] {
+        display: none;
+    }
+
+    header .dropdown-container {
         display: none;
     }
 }
